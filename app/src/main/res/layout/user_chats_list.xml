@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/user_imageView"
+        style="@style/userIconStyle"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        tools:src="@drawable/person_no_image" />
+
+    <TextView
+        android:id="@+id/user_name_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/user_imageView"
+        android:paddingLeft="8dp"
+        android:textColor="#000"
+        android:textSize="18sp"
+        tools:text="User's name" />
+
+    <TextView
+        android:id="@+id/message_text_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user_name_textView"
+        android:layout_toLeftOf="@id/unreadMessage_textView"
+        android:layout_toRightOf="@id/user_imageView"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        tools:text="It's place for a last message
+            that user receives or sends to another user. Check" />
+
+    <TextView
+        android:id="@+id/time_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="10:51" />
+
+    <ImageView
+        android:id="@+id/unreadMessage_textView"
+        style="@style/unreadMessage"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:backgroundTint="@color/colorAccent"
+        android:visibility="invisible"
+        tools:visibility="visible" />
+
+</RelativeLayout>
